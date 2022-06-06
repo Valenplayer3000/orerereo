@@ -1,2 +1,6 @@
-node_module
-.next
+node_modules/
+.next/
+dist
+yarn.lock
+yarn-error.log
+package-lock.json
