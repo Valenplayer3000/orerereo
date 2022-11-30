@@ -11,9 +11,9 @@ const Root = () => {
     const [toggle, setToggle] = useState<Number>(0);
     // const [displaySeed, setDisplaySeed] = useState<String>("");
 
-    const top = (<div id="top"><Top/></div>)
-    const middle = (<div id="middle"><Middle/></div>)
-    const bottom = (<div id="bottom"><Bottom/></div>)
+    const top = (<div id="top"><Top /></div>)
+    const middle = (<div id="middle"><Middle /></div>)
+    const bottom = (<div id="bottom"><Bottom /></div>)
 
     function topOreo(inv) {
         setDisplayData([...displayData, top])
@@ -46,7 +46,7 @@ const Root = () => {
     // } 
 
     // function formChangeHook(e: any) {
-        
+
     // }
 
     // function formSubmitHook(e: any) {
@@ -77,23 +77,25 @@ const Root = () => {
                 <h3>Create your favorite oreo combinations with this simple tool!</h3>
             </div>
             <div className="content">
-                <div className="stacker">
-                    {displayData.length == 0? (
-                    <>
-                    <p id="empty">Empty ;w;</p>
-                    </>): (
-                        <>
-                            {displayData}
-                        </>
-                    )}
-                </div>
+                <p id="seed">Seed: {seed}</p>
                 <div className="buttons">
                     <button onClick={topOreo}>O</button>
                     <button onClick={creamOrSomething}>re</button>
                     <button onClick={bottomOreo}>o</button>
                     <button id="danger" onClick={clearOreos}>Clear All</button>
                 </div>
-                <p id="seed">Seed: {seed}</p>
+                <div className="stacker">
+                    {displayData.length == 0 ? (
+                        <>
+                            <p id="empty">Empty ;w;</p>
+                        </>) : (
+                        <>
+                            {displayData}
+                        </>
+                    )}
+                </div>
+
+
                 {/* {toggle == 1? (<form onSubmit={formSubmitHook}>
                     <input
                         type="text"
